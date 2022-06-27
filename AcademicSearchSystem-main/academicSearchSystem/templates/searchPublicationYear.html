@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% from "includes/formhelpers.html" import render_field %}
+    
+    <h3>Yayın Yılı Sorgu</h3>
+
+    <form method="post">
+        {{ render_field(form.sorgu) }}
+        
+        <button type="submit" class="btn btn-primary">Ara</button>
+    </form>
+
+    <br>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Araştırmacı Adı</th>
+                <th scope="col">Araştırmacı Soyadı</th>
+                <th scope="col">Yayın Adı</th>
+                <th scope="col">Yayın Yılı</th>
+                <th scope="col">Yayın Türü</th>
+                <th scope="col">Yayın Yeri</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in liste %}
+                <tr>
+                    <th scope="row">#</th>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}<td>
+                    <td>{{i[4]}}<td>
+                    <td>{{i[5]}}<td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

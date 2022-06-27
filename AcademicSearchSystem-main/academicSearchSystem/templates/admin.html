@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% from "includes/formhelpers.html" import render_field %}
+
+    <h3>Admin Paneli</h3>
+    <hr>
+    
+    <form method="post">
+        {{ render_field(form.name, class = "form-control") }}
+        {{ render_field(form.surname, class = "form-control") }}
+        {{ render_field(form.publicationName, class = "form-control") }}
+        {{ render_field(form.publicationYear, class = "form-control") }}
+        {{ render_field(form.publicationGender, class = "form-control") }}
+        {{ render_field(form.publicationPlace, class = "form-control") }}
+        
+        <button type="submit" class="btn btn-danger">Ekle</button>
+    </form>
+{% endblock %}

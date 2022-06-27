@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3>Ana Sayfa</h3>
+
+    <br><br>
+
+    <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Ad Soyad</td>
+            <td><a href="/searchNameSurname" class="btn btn-danger">Sorgula</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Yayın Adı</td>
+            <td><a href="/searchPublicationName" class="btn btn-danger">Sorgula</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Yayın Yılı</td>
+            <td><a href="/searchPublicationYear" class="btn btn-danger">Sorgula</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+{% endblock %}
